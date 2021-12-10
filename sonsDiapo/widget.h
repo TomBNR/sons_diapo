@@ -2,7 +2,8 @@
 #define WIDGET_H
 
 #include <QWidget>
-
+#include <QMediaPlayer>
+#include <QFileDialog>
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
 QT_END_NAMESPACE
@@ -15,7 +16,17 @@ public:
     Widget(QWidget *parent = nullptr);
     ~Widget();
 
+private slots:
+    void on_pushButtonChooseFile_clicked();
+
+    void on_pushButtonPlayExternalSound_clicked();
+
+    void onQMediaPlayer_stateChanged(QMediaPlayer::State state);
+    void onQMediaPlayer_error(QMediaPlayer::Error error);
+
 private:
     Ui::Widget *ui;
+    QMediaPlayer player;
+    QString nomFichier;
 };
 #endif // WIDGET_H
