@@ -10,13 +10,13 @@ CONFIG += c++11
 
 SOURCES += \
     main.cpp \
-    sons.cpp
+    widget.cpp
 
 HEADERS += \
-    sons.h
+    widget.h
 
 FORMS += \
-    sons.ui
+    widget.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
