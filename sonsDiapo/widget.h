@@ -4,6 +4,8 @@
 #include <QWidget>
 #include <QMediaPlayer>
 #include <QFileDialog>
+#include <QProgressBar>
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class Widget; }
 QT_END_NAMESPACE
