@@ -26,6 +26,8 @@ private slots:
     void onQMediaPlayer_stateChanged(QMediaPlayer::State state);
     void onQMediaPlayer_error(QMediaPlayer::Error error);
 
+    void on_progressBar_valueChanged(int value);
+
 private:
     Ui::Widget *ui;
     QMediaPlayer player;

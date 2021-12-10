@@ -8,6 +8,7 @@ Widget::Widget(QWidget *parent)
     ui->setupUi(this);
     connect(&player,&QMediaPlayer::stateChanged,this,&Widget::onQMediaPlayer_stateChanged);
     connect(&player,QOverload<QMediaPlayer::Error>::of(&QMediaPlayer::error),this,&Widget::onQMediaPlayer_error);
+
 }
 
 Widget::~Widget()
@@ -43,3 +44,9 @@ void Widget::onQMediaPlayer_error(QMediaPlayer::Error error)
 {
     qDebug()<<player.errorString();
 }
+
+void Widget::on_progressBar_valueChanged(int value)
+{
+
+}
+
